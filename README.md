@@ -1,2 +1,2 @@
-# dbrm
-Database Replication Manager
+# PGRM
+PostgreSQL Replication Manager
