@@ -24,22 +24,3 @@ def config_loader(config_path):
         yaml_data = yaml.safe_load(file)
     return yaml_data
 
-# CSV 파일 쓰기
-def dict_to_csv(data, file_path):
-    this_data = data
-    this_file_path = file_path
-    columns = ['pgbench version',
-                'transaction type',
-                'scaling factor',
-                'partition method',
-                'partitions',
-                'query mode',
-                'number of clients',
-                'number of threads',
-                'number of transactions actually processed',
-                'latency average',
-                'initial connection time',
-                'tps'
-    ]
-    df = pd.DataFrame(this_data, columns=columns)
-    df.to_csv(this_file_path, mode='a', header=False, index=False)
